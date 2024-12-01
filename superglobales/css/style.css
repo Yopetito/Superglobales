@@ -1,17 +1,20 @@
 
-table, thead, tbody, tr, td, th {
-    border: solid rgb(107, 107, 107) 2px;
+table, th, td{
+    border: solid rgb(70, 36, 36) 2px;
     text-align: center;
-    margin-left: 10px;
+    margin-top: 10px;
 }
 
 th {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 
-
-
+.count {
+  padding: 5px;
+  color: rgb(80, 0, 0);
+  text-decoration: underline;
+}
 
 
 

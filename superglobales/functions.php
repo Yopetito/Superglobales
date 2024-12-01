@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 function getTotalArticles() {
     $nbArticles = 0;
@@ -9,7 +8,7 @@ function getTotalArticles() {
         foreach($_SESSION['products'] as $index => $product){
             $nbArticles+= $product['qtt'];
         }
-        return $nbArticles;
+        return $nbArticles."<br>";
     }
 }
 
@@ -54,6 +53,18 @@ function factureProduit() {
             "</tr>",
             "</tbody>",
             "</table>";
+    }
+}
+
+function showProductAdd() {
+    $nameArticle = "";
+    if(!isset($_SESSION['products']) || empty($_SESSION['products'])){
+        echo "";
+    }else {
+        foreach($_SESSION['products'] as $index => $product){
+            $nameArticle = $_SESSION['products'][$index]['name'];
+        }
+        echo $_SESSION['products'][$index]['qtt']." ".$nameArticle." ont été ajouté dans le panier";
     }
 }
 
